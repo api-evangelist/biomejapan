@@ -1,0 +1,16 @@
+generated: '2026-09-28'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: biome.co.jp
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Dec 21 03:23:40 2026 GMT
+  hsts: false
+domains:
+- domain: biome.co.jp
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: none

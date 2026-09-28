@@ -1,23 +1,77 @@
 aid: biomejapan
+
 name: Biomejapan
-description: 'Biomejapan is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://biome.co.jp/wp/wp-content/uploads/2023/02/service-biome2x.png
+
+description: Biomejapan, operating under the brand Biome Inc., provides comprehensive nature data platforms and ecological analytics solutions
+  for corporations and governments in Japan. Leveraging the country’s largest real‑time biological distribution dataset, the company offers APIs
+  and services that enable monitoring, protection, and enrichment of natural environments, supporting sustainability initiatives and regulatory
+  compliance.
+
 url: https://raw.githubusercontent.com/api-evangelist/biomejapan/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-28 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-28'
+
 modified: '2026-09-28'
+
 tags:
 - Company
-apis: []
+- Data
+- Ecology
+- Sustainability
+- Japan
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: WellKnown
+  url: well-known/biomejapan-well-known.yml
+- type: Hosts
+  url: hosts/biomejapan-hosts.yml
+- type: DomainSecurity
+  url: security/biomejapan-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/biomejapan
+  url: https://biome.co.jp
+- type: Documentation
+  url: https://biome.co.jp/en/
+- type: TermsOfService
+  url: https://biome.co.jp/appmessage/terms/
+- type: PrivacyPolicy
+  url: https://biome.co.jp/privacy-policy/
+- type: SecurityPolicy
+  url: https://biome.co.jp/security-policy/
+
+apis:
+- name: Biome API
+  description: API providing access to ecological data and analytics services.
+  humanURL: https://biome.co.jp/en/
+  aid: biomejapan:biome-api
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: Documentation pages are rendered via JavaScript and no machine‑readable OpenAPI spec was found.
+  evidence:
+  - url: https://biome.co.jp/openapi.json
+    status: 200
+  checked: '2026-09-28'
+x-enrichment:
+  date: '2026-09-28'
+  status: enriched
+  artifacts_added: 7
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
