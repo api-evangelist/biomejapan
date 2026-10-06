@@ -22,7 +22,7 @@ specificationVersion: '0.20'
 
 created: '2026-09-28'
 
-modified: '2026-09-28'
+modified: '2026-10-06'
 
 tags:
 - Company
@@ -38,6 +38,10 @@ maintainers:
   email: info@apis.io
 
 common:
+- url: https://biome.co.jp/news/
+  type: Blog
+- url: https://biome.co.jp/news/feed/
+  type: BlogRSS
 - type: WellKnown
   url: well-known/biomejapan-well-known.yml
 - type: Hosts
